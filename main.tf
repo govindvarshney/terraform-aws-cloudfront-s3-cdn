@@ -307,6 +307,8 @@ resource "aws_cloudfront_distribution" "default" {
     }
   }
 
+  ordered_cache_behavior = "${var.cache_behavior}"
+
   restrictions {
     geo_restriction {
       restriction_type = var.geo_restriction_type

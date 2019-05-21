@@ -28,6 +28,11 @@ output "cf_hosted_zone_id" {
   description = "CloudFront Route 53 zone ID"
 }
 
+output "cf_origin_id" {
+  value       = "${module.distribution_label.id}"
+  description = "CloudFront Origin ID of the main origin"
+}
+
 output "s3_bucket" {
   value       = local.bucket
   description = "Name of S3 bucket"

@@ -256,6 +256,12 @@ variable "max_ttl" {
   description = "Maximum amount of time (in seconds) that an object is in a CloudFront cache"
 }
 
+variable "cache_behavior" {
+  type        = "list"
+  description = "An ordered list of cache behaviors resource for this distribution. List from top to bottom in order of precedence. The topmost cache behavior will have precedence 0."
+  default     = []
+}
+
 variable "trusted_signers" {
   type        = list(string)
   default     = []
