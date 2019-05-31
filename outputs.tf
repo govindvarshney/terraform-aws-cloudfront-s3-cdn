@@ -33,6 +33,11 @@ output "cf_origin_id" {
   description = "CloudFront Origin ID of the main origin"
 }
 
+output "cf_oai_user_id" {
+  value       = "${aws_cloudfront_origin_access_identity.default.s3_canonical_user_id}"
+  description = "Canonical User ID of the CloudFront Origin Access Identity"
+}
+
 output "s3_bucket" {
   value       = local.bucket
   description = "Name of S3 bucket"
